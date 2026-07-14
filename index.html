@@ -1,0 +1,205 @@
+
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="robots" content="noindex, follow">
+  <title>Impressum</title>
+
+  <!-- Source Sans 3 aus Google Fonts, mit System-Fallbacks falls nicht ladbar -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Source+Sans+3:ital,wght@0,300;0,400;0,600;0,700;1,400&display=swap" rel="stylesheet">
+
+  <style>
+    :root {
+      --bg: #02001d;                       /* Seitenhintergrund */
+      --text: #c9cad9;                     /* kühler grauweißer Fließtext */
+      --heading: #ffffff;                  /* Überschriften */
+      --muted: #7d7e9b;                    /* Hinweise / Sekundärtext */
+      --placeholder: #9aa0d6;              /* auszufüllende Platzhalter (kühler Akzentton) */
+      --accent: #96a2ff;                   /* dezenter kühler Akzent (Links, Linien) */
+      --line: rgba(255, 255, 255, 0.10);   /* feine Haarlinien */
+      --max-breite: 720px;
+    }
+
+    * { box-sizing: border-box; }
+
+    html { -webkit-text-size-adjust: 100%; }
+
+    body {
+      margin: 0;
+      padding: clamp(56px, 10vw, 120px) 22px 96px;
+      font-family: "Source Sans 3", -apple-system, BlinkMacSystemFont,
+                   "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+      font-size: 17px;
+      font-weight: 400;
+      line-height: 1.75;
+      color: var(--text);
+      background-color: var(--bg);
+      /* zwei sehr weiche, kühle Lichtquellen für Tiefe – ganz ohne Kasten */
+      background-image:
+        radial-gradient(60% 55% at 50% -8%, rgba(90, 104, 220, 0.22), transparent 70%),
+        radial-gradient(45% 45% at 88% 108%, rgba(60, 82, 190, 0.14), transparent 70%);
+      background-attachment: fixed;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-rendering: optimizeLegibility;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+    }
+
+    .inhalt {
+      width: 100%;
+      max-width: var(--max-breite);
+    }
+
+    /* ---------- Kopf ---------- */
+    header {
+      text-align: center;
+      margin-bottom: clamp(48px, 8vw, 84px);
+    }
+
+    .eyebrow {
+      display: inline-block;
+      font-size: 12.5px;
+      font-weight: 600;
+      letter-spacing: 0.34em;
+      text-transform: uppercase;
+      color: var(--accent);
+      margin: 0 0 18px;
+      padding-left: 0.34em; /* optischer Ausgleich des letter-spacing */
+    }
+
+    h1 {
+      font-size: clamp(40px, 9vw, 68px);
+      font-weight: 300;
+      letter-spacing: 0.02em;
+      line-height: 1.05;
+      color: var(--heading);
+      margin: 0;
+    }
+
+    .kopf-linie {
+      width: 64px;
+      height: 1px;
+      margin: 28px auto 0;
+      background: linear-gradient(90deg, transparent, var(--accent), transparent);
+      opacity: 0.8;
+    }
+
+    /* ---------- Abschnitte ---------- */
+    section {
+      padding-top: clamp(30px, 5vw, 44px);
+      margin-top: clamp(30px, 5vw, 44px);
+      border-top: 1px solid var(--line);
+    }
+
+    section:first-of-type {
+      border-top: none;
+      margin-top: 0;
+      padding-top: 0;
+    }
+
+    h2 {
+      font-size: 13px;
+      font-weight: 600;
+      letter-spacing: 0.22em;
+      text-transform: uppercase;
+      color: var(--heading);
+      margin: 0 0 18px;
+      text-align: center;
+    }
+
+    p {
+      margin: 0 0 15px;
+      text-align: left;
+    }
+
+    p:last-child { margin-bottom: 0; }
+
+    /* Kontakt-/Adressblöcke elegant zentriert */
+    .block-zentriert {
+      text-align: center;
+      color: var(--text);
+      line-height: 1.85;
+    }
+
+    .placeholder {
+      color: var(--placeholder);
+      font-weight: 400;
+    }
+
+    .hinweis {
+      margin-top: 12px;
+      font-size: 14px;
+      line-height: 1.65;
+      color: var(--muted);
+      text-align: center;
+    }
+
+    a {
+      color: var(--accent);
+      text-decoration: none;
+      border-bottom: 1px solid rgba(150, 162, 255, 0.35);
+      padding-bottom: 1px;
+      transition: border-color 0.2s ease, color 0.2s ease;
+    }
+
+    a:hover, a:focus {
+      color: #c2cbff;
+      border-bottom-color: var(--accent);
+    }
+
+    /* ---------- Fuß ---------- */
+    .schluss {
+      margin-top: clamp(40px, 7vw, 72px);
+      text-align: center;
+      font-size: 13.5px;
+      letter-spacing: 0.04em;
+      color: var(--muted);
+    }
+
+    .zurueck {
+      margin-top: 20px;
+      text-align: center;
+      font-size: 13px;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+    }
+
+    .zurueck a {
+      color: var(--muted);
+      border-bottom-color: transparent;
+    }
+    .zurueck a:hover, .zurueck a:focus {
+      color: var(--text);
+    }
+    
+    .impress {
+	 display: flex;
+ 	 justify-content: center;
+ 	 align-items: center;
+	}
+
+    }
+
+    @media (max-width: 520px) {
+      body { font-size: 16px; }
+    }
+  </style>
+</head>
+<body>
+  <div class="inhalt">
+    <header>
+      <h1>Aaron Pollux</h1>
+      <div class="kopf-linie"></div>
+    </header>
+    <div class="impress">
+      <a href="/impressum"><span class="placeholder">[Zum Impressum]</span></a>
+    </div>
+  </div>
+</body>
+</html>
